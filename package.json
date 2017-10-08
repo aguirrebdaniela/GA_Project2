@@ -1,0 +1,25 @@
+{
+  "name": "project2files",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.16.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "morgan": "^1.8.1",
+    "mustache-express": "^1.2.4",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "pg-promise": "^5.6.2"
+  }
+}
