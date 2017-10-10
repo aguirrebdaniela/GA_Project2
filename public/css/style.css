@@ -1,4 +1,246 @@
 /*LANDING PAGE-----------*/
 
 /*LANDING PAGE-----------*/
+/*font-family: 'Homemade Apple', cursive;
+font-family: 'La Belle Aurore', cursive;
+font-family: 'Kristi', cursive;
+font-family: 'Cedarville Cursive', cursive;*/
+
+body#index{
+    background-image: url("./images/background4.jpg");
+    background-size: 1300px 700px;
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1.indexh1{
+    padding:30px;
+    font-size:70px;
+    text-shadow: 2px 2px gray;
+}
+
+h3.index{
+    text-decoration: none;
+    font-family: 'Kristi', cursive;
+    font-size:30px;
+    color: #9B8B7C;
+}
+
+a.indexlink {
+    color: gray;
+  text-decoration: none;
+}
+
+a.indexlink:hover{
+    color: white;
+}
+
+/*------------------LOGIN PAGE---------------------*/
+body#login{
+    background-image: url("./images/background4.jpg");
+    background-size: 1300px 700px;
+    background-repeat: no-repeat;
+    font-family: 'Cedarville Cursive', cursive;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+section#form{
+    background-color: #F9EDD5;
+    height: 400px;
+    width: 600px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    padding:10px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#loginbutton{
+    font-family: 'Times New Roman';
+
+}
+
+#signupbutton{
+    
+}
+
+#email{
+    font-size: 12px;
+    padding: 3px;
+    width: 200px;
+    font-family: 'Times New Roman', cursive;
+
+}
+
+#password{
+    font-size: 12px;
+    padding: 3px;
+    width: 200px;
+    font-family: 'Times New Roman', cursive;
+
+}
+
+
+/* -----------------SIGN UP PAGE----------------------*/
+
+body#new{
+    background-image: url("./images/background4.jpg"); 
+    background-repeat: no-repeat;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: center;
+    background-size: 1300px 700px;
+    background-repeat: no-repeat;
+
+}
+
+
+/*--------------PROFILE PAGE--------------------------*/
+
+body#profile{
+    background-image: url("./images/background9.jpg"); 
+    display: block;
+    background-size: 100%;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: center;
+
+}
+
+#map{
+   border: 15px solid #3e2b14;
+   text-align: center;
+   margin: 0 auto;
+    padding: 5px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+
+ul#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+li.nav {
+    float: right;
+    text-decoration: none;
+    margin: 0;
+}
+
+a.navlink {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    
+}
+/* Change the link color to #111 (black) on hover */
+a.navlink:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/*--------------COUNTRIES--------------------------*/
+body{
+    background-image: url("./images/background9.jpg"); 
+    display: block;
+    background-size: 100%;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: center;
+    margin: 0;
+
+}
+
+
+/*--------------TRIPS--------------------------*/
+body#profile{
+    background-image: url("./images/background9.jpg"); 
+    display: block;
+    background-size: 100%;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: center;
+
+}
+
+.buttonBox{
+
+}
+
+/*--------------TRIPS--------------------------*/
+
+body#profile{
+    background-image: url("./images/background9.jpg"); 
+    display: block;
+    background-size: 100%;
+    font-family: 'Cedarville Cursive', cursive;
+    text-align: center;
+
+}
+
+/*--------------Box--------------------------*/
+
+.box{
+    background-color: #D3D3D3;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 4px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+a {
+    color: black;
+     text-decoration: none;
+}
+
+a.hover {
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1#underline{
+    text-decoration: underline;
+}
+
+/*--------------container bootstrap--------------------------*/
+
+.container{
+    width: 600px !important;
+}
+
+
+.containerAlphabet{
+  margin-top:45vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+body#countries-show{
+font-family: 'Cedarville Cursive', cursive;
+}
+h1{
+    margin: 20px;
+    padding-top: 15px;
+    
+}
+
+body#trips-show{
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+
 

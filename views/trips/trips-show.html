@@ -5,21 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Homemade+Apple|Kristi|La+Belle+Aurore" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/jquery.js" charset="utf-8"></script>
     <script src="/js/script.js" charset="utf-8"></script>
+    
     <title>Trip</title>
   </head>
-  <body>
-      <h1>{{city}}</h1>
-      <h3>Year: {{year}}</h3>
-      <div><img src="{{image}}"/></div>
-      <h3> {{description}} </h3>
-  
-      <a href="/trips/{{id}}/edit" class="button">Edit Trip</a><br />
-      <button id="delete" data-id={{id}} class="button">Delete Trip</button><br/>
-      <a href="/trips" class="button">Back to All</a>
+  <body id="trips-show">
+    <input type="hidden" id="hiddenm" value="{{cities}}">
+           
+           <ul id="nav">
+             
+             <li class="nav"> <a href="/users/logout" class="navlink">Logout</a> </li>
 
+             <li class="nav"> <a href="/wants/" class="navlink"> Places I want to go </a> </li>
+
+             <li class="nav"> <a href="/countries/" class="navlink"> All Countries </a> </li>
+
+             <li class="nav"> <a href="/trips/" class="navlink"> My trips </a> </li>  
+
+             <li class="nav"> <a href="/users/profile" class="navlink">Home</a> </li> 
+            
+            </ul>
+
+     <div class="box">
+      <h1 id="underline">{{trip.city}}</h1>
+      <h3>Year: {{trip.year}}</h3>
+       <h3> Description: {{trip.description}} </h3>
+       <a href="/trips/{{trip.id}}/edit" class="button">Edit Trip</a><br/>
+       <div class="container">
+      <div id="imageList" class="row">
+      </div>
+      </div>
+  
+      
+      <button id="delete" data-id={{trip.id}} class="button">Delete Trip</button><br/>
+
+    </div>
+
+       
+    <script type="text/javascript">
+
+    var cities = document.getElementById("hiddenm").value.split(",");
+    console.log(cities)
+    $(cities).each(function () {
+          var city = this;
+          console.log(city)
+          $("#imageList").append("<div class='col-lg-4 gallery'><img style='width:200px; height:200px; margin:5px 5px 5px 5px' src='" + city+"'></div>")
+    });
+
+
+    </script>
 
   </body>
 </html>

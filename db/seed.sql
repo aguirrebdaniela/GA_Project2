@@ -6,21 +6,28 @@ CREATE TABLE countries (
     id serial primary key,
     countryName VARCHAR,
     capital VARCHAR,
-    continentName VARCHAR
+    continentName VARCHAR,
+    population VARCHAR,
+  	area VARCHAR,
+  	currency VARCHAR,
+  	language VARCHAR,
+  	flag VARCHAR 
 );
 
 CREATE TABLE trips (
  	id serial primary key,
 	city VARCHAR,
-	year INTEGER,
+	year VARCHAR,
 	image VARCHAR,
 	description VARCHAR,
+	user_id VARCHAR,
 	country_id integer REFERENCES countries(id)
 );
 
 CREATE TABLE wants (
 	id serial primary key,
 	city VARCHAR,
+	user_id VARCHAR,
 	country_id integer REFERENCES countries(id)
 );
 
@@ -276,17 +283,17 @@ INSERT INTO countries (countryName, capital, continentName) VALUES
 ('Zambia', 'Lusaka', 'Africa'),
 ('Zimbabwe', 'Harare', 'Africa');
 
-INSERT INTO trips (city, year, image, description, country_id) VALUES
-('Lima', 1994, 'http://luxurylaunches.com/wp-content/uploads/2016/10/lima-peru-1170x677.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 174),
-('New York City', 2017, 'https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' , 233),
-('Washington', 2017, 'https://cdn.trolleytours.com/wp-content/uploads/2016/06/washington-dc-capitol-at-night.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 233),
-('Madrid', 2017, 'https://www.happycow.net/blog/wp-content/uploads/2015/08/madrid-07.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 68),
-('Barcelona', 2011, 'https://www.fattiretours.com/uploads/2208/barcelona%20hero.png', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 68),
-('Bogota', 2005,  'https://api.services.trvl.com/backgrounds/images/bogota_1.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 49);
+INSERT INTO trips (city, year, image, description, country_id, user_id) VALUES
+('Lima', 1994, 'http://luxurylaunches.com/wp-content/uploads/2016/10/lima-peru-1170x677.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 174, 5),
+('New York City', 2017, 'https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' , 233, 5),
+('Washington', 2017, 'https://cdn.trolleytours.com/wp-content/uploads/2016/06/washington-dc-capitol-at-night.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 233, 5),
+('Madrid', 2017, 'https://www.happycow.net/blog/wp-content/uploads/2015/08/madrid-07.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 68, 5),
+('Barcelona', 2011, 'https://www.fattiretours.com/uploads/2208/barcelona%20hero.png', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 68, 5),
+('Bogota', 2005,  'https://api.services.trvl.com/backgrounds/images/bogota_1.jpg', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry 1500s, when an', 49, 5);
 
-INSERT INTO wants (city, country_id) VALUES
-('Los Angeles', 233),
-('Hong Kong', 48),
-('Sydney', 56),
-('Capetown', 241),
-('Lisbon', 178);
+INSERT INTO wants (city, country_id, user_id) VALUES
+('Los Angeles', 233, 5),
+('Hong Kong', 48, 5),
+('Sydney', 56, 5),
+('Capetown', 241, 6),
+('Lisbon', 178, 6);

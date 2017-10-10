@@ -66,6 +66,24 @@ $(document).ready(function() {
     })
   })
 
+    $('#new-want').on('submit', (e) => {
+    e.preventDefault();
+    const id = $('#id').val();
+    const data = {
+      city: $('#city').val(),
+      year: $('#year').val(),
+      description: $('#description').val()
+    }
+    $.ajax(`/wants/`, {
+      method: 'POST',
+      data: data,
+      success: data => {
+        location.href = `/wants/`
+      },
+      error: err => console.log(err)
+    })
+  })
+
 
 
 

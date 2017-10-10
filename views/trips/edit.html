@@ -5,14 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Homemade+Apple|Kristi|La+Belle+Aurore" rel="stylesheet">
   <script src="/js/jquery.js" charset="utf-8"></script>
   <script src="/js/script.js" charset="utf-8"></script>
   <title>Edit Trip</title>
 </head>
 <body>
-  <div class="container">
 
-    <h1>Edit Trip</h1>
+     <ul id="nav">
+             
+             <li class="nav"> <a href="/users/logout" class="navlink">Logout</a> </li>
+
+             <li class="nav"> <a href="/wants/" class="navlink"> Places I want to go </a> </li>
+
+             <li class="nav"> <a href="/countries/" class="navlink"> All Countries </a> </li>
+
+             <li class="nav"> <a href="/trips/" class="navlink"> My trips </a> </li>  
+
+             <li class="nav"> <a href="/users/profile" class="navlink">Home</a> </li> 
+            
+            </ul>
+
+  <div class="box">
+
+    <h1 id="underline">Edit Trip</h1>
     <form id='edit-trip'>
       <input type="hidden" value={{id}} id="id">
       <label for="city">City</label>

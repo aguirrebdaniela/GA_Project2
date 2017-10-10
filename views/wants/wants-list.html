@@ -3,11 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Homemade+Apple|Kristi|La+Belle+Aurore" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <title>Login User</title>
 </head>
 <body>
-  <h1>Places I want to go </h1>
+  <ul id="nav">
+             
+             <li class="nav"> <a href="/users/logout" class="navlink">Logout</a> </li>
+
+             <li class="nav"> <a href="/wants/" class="navlink"> Places I want to go </a> </li>
+
+             <li class="nav"> <a href="/countries/" class="navlink"> All Countries </a> </li>
+
+             <li class="nav"> <a href="/trips/" class="navlink"> My trips </a> </li>  
+
+             <li class="nav"> <a href="/users/profile" class="navlink">Home</a> </li> 
+            
+            </ul>
+   <div class="box">
+  <h1 id="underline">Places I want to visit </h1>
   <ul>{{ #wants }}
   	
      	<li> {{city}}
@@ -16,7 +31,10 @@
   {{ /wants }}
    </ul>
 
-   <a href="/users/profile"> Go Back </a>           
+  <a href="/wants/new"> Create New! </a> <br>
 
+  <a href="/users/profile"> Go Back </a>   
+            
+  </div>
 </body>
 </html>

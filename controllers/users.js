@@ -11,14 +11,9 @@ const auth = require('../services/auth');
 
 router.post(
     '/',
-    // we want the behavior of the site to vary depending on whether or
-    // not the user is already logged in. If they are logged in, we want
-    // to send them to /users/profile. If they are not, we want to send
-    // them to users/new.
+   
     passport.authenticate(
-        // The following string indicates the particular strategy instance
-        // we'll want to use to handle signup. We defined behavior for
-        // 'local-signup' back in index.js.
+    
         'local-signup', {
             failureRedirect: '/users/new',
             successRedirect: '/users/profile'
@@ -71,7 +66,7 @@ module.exports = router;router.get(
     auth.restrict,
     User.findByEmailMiddleware,
     (req, res) => {
-        Trip.findAll (req, res, function () {
+        Trip.findAll (req, res, res.locals.userData.id, function () {
         var {trips} = res.locals;
         var cities = new Array()
         for (var i=0; i<trips.length; i++)
@@ -79,7 +74,8 @@ module.exports = router;router.get(
             cities.push(trips[i].city)
         }
         console.log(cities)
-        res.render('users/profile', { user: res.locals.userData, cities: cities});
+        res.render('users/profile', 
+            { user: res.locals.userData, cities: cities});
        })
        
         

@@ -5,33 +5,37 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>User Profile</title>
-    <link rel="stylesheet" href="">
     <script src="/js/jquery.js"></script>
     <script src="/js/script.js"></script>
-    <!-- <script src="http://maps.google.com/maps/api/js?sensor=false" 
-          type="text/javascript"></script> -->
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Homemade+Apple|Kristi|La+Belle+Aurore" rel="stylesheet">
      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgEVvTG0xMw0NEWoTy9kyOj1Fy7dcBD1Q" 
           type="text/javascript"></script>
           
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    <main>
-        <section>
-            Welcome to your profile, {{user.email}}
-            <div>
-
 
 <input type="hidden" value="{{cities}}" id="hiddenm">
-            <div>
-                <a href="/users/logout">Logout</a>
-            </div>
+            <ul id="nav">
+             
+             <li class="nav"> <a href="/users/logout" class="navlink">Logout</a> </li>
+
+             <li class="nav"> <a href="/wants/" class="navlink"> Places I want to go </a> </li>
+
+             <li class="nav"> <a href="/countries/" class="navlink"> All Countries </a> </li>
+
+             <li class="nav"> <a href="/trips/" class="navlink"> My trips </a> </li>  
+
+             <li class="nav"> <a href="/users/profile" class="navlink">Home</a> </li> 
             
-            <a href="/countries/"> All Countries </a> <br>
-            <a href="/trips/"> My trips </a> <br>
-            <a href="/wants/"> Places I want to go </a>
-             <div id="map" style="width: 500px; height: 400px;"></div>
+            </ul>
+
+             <h1 id="profile"> Welcome to your profile, {{user.email}} </h1>
+             
+            <div id="map" style="width: 500px; height: 400px;">
+            </div>
+
 
   <script type="text/javascript">
 
@@ -61,8 +65,8 @@
         })
     }
   </script>
-        </section>
-    </main>
+
+    
 </body>
 
 </html>

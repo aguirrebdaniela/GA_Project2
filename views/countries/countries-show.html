@@ -1,21 +1,60 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <script src="jquery.js" charset="utf-8"></script>
-  <script src="script.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive|Homemade+Apple|Kristi|La+Belle+Aurore" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-  
-    <title>Student {{id}}</title>
+    <script src="/js/jquery.js" charset="utf-8"></script>
+    <script src="/js/script.js" charset="utf-8"></script>
+    <title>Trip</title>
   </head>
-  <body>
-  <div class="country">
-    <h1> {{countryname}} </h1>
-    <h2> {{capital}} </h2>
-    <h2> {{continentname}} </h2>
+  <body id="countries-show">
+<input type="hidden" id="hiddenm" value="{{countries}}">
+           <ul id="nav">
+             
+             <li class="nav"> <a href="/users/logout" class="navlink">Logout</a> </li>
+
+             <li class="nav"> <a href="/wants/" class="navlink"> Places I want to go </a> </li>
+
+             <li class="nav"> <a href="/countries/" class="navlink"> All Countries </a> </li>
+
+             <li class="nav"> <a href="/trips/" class="navlink"> My trips </a> </li>  
+
+             <li class="nav"> <a href="/users/profile" class="navlink">Home</a> </li> 
+            
+            </ul>
+   
+  <div class="box">
+    <h1 id="underline"> {{country.countryname}} </h1>
+    <h2> {{country.capital}} </h2>
+    <h2> {{country.continentname}} </h2>
+    <h3> population: {{countryInformation.population}}<h3>
+   
    <!--  <h3> You have been to {{city}} in this country </h3>-->
-     <a href="/countries/"> Go Back </a>
-  </div>
     
+    <div class="container">
+      <div id="imageList" class="row">
+      </div>
+       <a href="/countries/"> Go Back </a>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+    var countries = document.getElementById("hiddenm").value.split(",");
+    console.log(countries)
+    $(countries).each(function () {
+          var country = this;
+          console.log(country)
+          $("#imageList").append("<div class='col-lg-4 gallery'><img style='width:200px; height:200px; margin:5px 5px 5px 5px' src='" + country+"'></div>")
+    });
+
+
+    </script>
+   
+
   </body>
 </html>

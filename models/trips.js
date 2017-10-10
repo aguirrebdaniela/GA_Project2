@@ -1,8 +1,8 @@
 const db = require('../db/config');
 const Trip = {};
 
-Trip.findAll = (req, res, next) => {
-  db.manyOrNone(`SELECT * FROM trips`)
+Trip.findAll = (req, res, username, next) => {
+  db.manyOrNone(`SELECT * FROM trips WHERE user_id=$1`, [username])
     .then(trips => {
       res.locals.trips = trips;
       next();
@@ -12,7 +12,7 @@ Trip.findAll = (req, res, next) => {
 
 Trip.findById = (req, res, next) => {
   const {id} = req.params;
-  db.oneOrNone(`SELECT * FROM trips WHERE id = $1`, [id])
+  db.oneOrNone(`SELECT * FROM trips WHERE id = $1 `, [id])
     .then(trip => {
       res.locals.trip = trip;
       next();
@@ -20,9 +20,10 @@ Trip.findById = (req, res, next) => {
     .catch(err => console.log(err));
 }
 
-Trip.create = (req, res, next) => {
+Trip.create = (req, res, user_id, next) => {
   const {city, year, image, description} = req.body;
-  db.one(`INSERT INTO trips (city, year, image, description) VALUES($1, $2, $3, $4) RETURNING *`, [city, year, image, description])
+  console.log("create " + user_id)
+  db.one(`INSERT INTO trips (city, year, image, description, user_id) VALUES($1, $2, $3, $4, $5) RETURNING *`, [city, year, image, description, user_id])
     .then(trip => {
       res.locals.trip = trip;
       next();
