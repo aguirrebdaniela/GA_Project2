@@ -1,6 +1,6 @@
-#WDI Project 2: Travel app 
+# WDI Project 2: Travel app 
 
-##User Stories
+## User Stories
 * User will land on a landing page that asks him for a user login/password or allows him to sign up
 * User will then be redirected into the main page where he will see a big map and a navigation bar with multiple options:
 	*	a link to a list of every country with information about the country
@@ -14,19 +14,19 @@
 *	The map on the main page should mark the places visited by the user 
 
 
-##Technologies used
-###Models
+## Technologies used
+### Models
 
-###Express, PG-Promise, Mustache-Express
-###RESTful routes: GET, POST, PUT, and DELETE
-###External APIs
-####Geolocation Google Maps
-####Unsplash
-####Rest Countries
+### Express, PG-Promise, Mustache-Express
+### RESTful routes: GET, POST, PUT, and DELETE
+### External APIs
+#### Geolocation Google Maps
+#### Unsplash
+#### Rest Countries
 Save data from third party API into Database
-###MVC Architecture
-###NPM Additional Package
-####Bootstrap
+### MVC Architecture
+### NPM Additional Package
+#### Bootstrap
 
 
 Unsolved problems
