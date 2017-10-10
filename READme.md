@@ -15,22 +15,34 @@
 
 
 ## Technologies used
-### Models
+### Database
+* Countries:
+	* Data table contains a list of every country in the world and some information about each country 
+* Trips:
+	* Contains a list of the trips the user has made and a small description and is related to the countries table
+* Wants:
+	* Contains a list of the places the user wants to visit
 
 ### Express, PG-Promise, Mustache-Express
 ### RESTful routes: GET, POST, PUT, and DELETE
+* My application allows the user to interact with the database by adding, deleting, updating and getting the information on the database. They can add a trip, update it and delete it. Users can also add and delete trips from the list of places they want to visit. 
 ### External APIs
-#### Geolocation Google Maps
-#### Unsplash
-#### Rest Countries
-Save data from third party API into Database
+* #### Google Maps Geocoding API 
+	* Geocoding is the process of converting addresses (ex. street address or a city) into geographic coordinates (ex. latitude and longitude), which  can be used to place markers on a map. 
+	* In my application, the API is used to use a city name and convert it into a marker on a google-based map
+* #### Unsplash source API
+	* Narrowed the selection of random photos by adding a search term (city and country in my case) to get random pictures of cities and countries.
+* #### Rest Countries
+	Save data from third party API into Database
 ### MVC Architecture
+Software architectural pattern used to implements user interfaces on computers. It divides the application into thre parts that are connected with one another
 ### NPM Additional Package
-#### Bootstrap
+* #### Bootstrap
 
 
-Unsolved problems
-Any other useful information about your app
-	Other 2 APIs I researched: 
+## Closing of Project
+### Unsolved problems: 
+
+### Other 2 APIs I researched: 
 		- Instagram
 		- Foursquare
