@@ -36,7 +36,7 @@
 * #### Rest Countries API
 	* Used this API to get more information about each country and save the data from into my own database
 ### MVC Architecture
-	* Software architectural pattern used to implements user interfaces on computers. It divides the application into thre parts that are connected with one another
+* Software architectural pattern used to implements user interfaces on computers. It divides the application into thre parts that are connected with one another
 ### NPM Additional Package
 * #### Bootstrap
 	* Bootstrap is a "sleek, intuitive, and powerful front-end framework for faster and easier web development"
@@ -48,11 +48,11 @@
 
 ## Closing of Project
 ### Unsolved problems: 
-	* Lack delete button on my "Places I want to visit" list because of time constraints
-	* Some CSS adjustments- buttons for example
-	* Wanted to add a different colored marker for the places the user wants to visit but has not visited still
-	* Edit the countries list so users can search through it alphabetically 
+* Lack delete button on my "Places I want to visit" list because of time constraints
+* Some CSS adjustments- buttons for example
+* Wanted to add a different colored marker for the places the user wants to visit but has not visited still
+* Edit the countries list so users can search through it alphabetically 
 
 ### Other 2 APIs I researched: 
-	* Instagram
-	* Foursquare
+* Instagram
+* Foursquare
